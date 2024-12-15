@@ -3,7 +3,7 @@ package com.asses.library;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = "com.asses.library")
 public class LibraryApplication {
 
 	public static void main(String[] args) {
