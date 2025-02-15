@@ -1,0 +1,23 @@
+name: Update Monday.com on Git Push
+
+on:
+  push:
+    branches:
+      - master  # Change if needed
+
+jobs:
+  update_monday:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Notify Monday.com
+        run: |
+          curl -X POST "https://api.monday.com/v2" \
+          -H "Authorization: ${{ secrets.MONDAY_API_KEY }}" \
+          -H "Content-Type: application/json" \
+          --data '{ 
+            "query": "mutation { create_update (item_id: 1971940910, body: \"🚀 New commit pushed to master branch\") { id } }"
+          }'
