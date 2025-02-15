@@ -16,8 +16,9 @@ jobs:
       - name: Notify Monday.com
         run: |
           curl -X POST "https://api.monday.com/v2" \
-          -H "Authorization: ${{ secrets.MONDAY_API_KEY }}" \
-          -H "Content-Type: application/json" \
-          --data '{ 
-            "query": "mutation { create_update (item_id: 1971940910, body: \"🚀 New commit pushed to master branch\") { id } }"
-          }'
+-H "Authorization: YOUR_NEW_API_KEY" \
+-H "Content-Type: application/json" \
+--data '{ 
+  "query": "mutation { create_update (item_id: 1971940910, body: \"🚀 Test Update from API\") { id } }"
+}'
+
