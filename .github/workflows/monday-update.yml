@@ -16,7 +16,7 @@ jobs:
       - name: Notify Monday.com
         run: |
           curl -X POST "https://api.monday.com/v2" \
--H "Authorization: YOUR_API_KEY" \
+-H "Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ0aWQiOjQ3MzM2MTU5NCwiYWFpIjoxMSwidWlkIjo3MjIxMzI3NSwiaWFkIjoiMjAyNS0wMi0xN1QwNzowNzo1My45MDhaIiwicGVyIjoibWU6d3JpdGUiLCJhY3RpZCI6MjgwMjUzMjcsInJnbiI6ImFwc2UyIn0.1rFpMfjO0ZRMdqUvQMXjMm3hFK74tGJtUliqpVVB-xg" \
 -H "Content-Type: application/json" \
 --data '{ 
   "query": "mutation { create_update (item_id: 1971940910, body: \"🚀 Test Update from API\") { id } }"
