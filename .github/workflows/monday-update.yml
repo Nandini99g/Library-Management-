@@ -21,4 +21,3 @@ jobs:
 --data '{ 
   "query": "mutation { create_update (item_id: 1971940910, body: \"🚀 Test Update from API\") { id } }"
 }'
-
